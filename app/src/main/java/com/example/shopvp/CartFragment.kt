@@ -19,7 +19,6 @@ import com.example.shopvp.databinding.FragmentCartBinding
 import com.example.shopvp.model.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 import com.example.shopvp.ProductDetailFragment.CartItem2
 import com.example.shopvp.databinding.CartItemBinding
 
@@ -75,7 +74,7 @@ class CartFragment: Fragment() {
 
     }
 
-    class CartViewModel @Inject constructor(
+    class CartViewModel constructor(
         private val cartUseCase: ProductDetailFragment.CartUseCase
     ) : ViewModel() {
 
@@ -156,7 +155,6 @@ class CartFragment: Fragment() {
         fun decrementClickListener(listener : (CartItem2) -> Unit){
             decrementListener = listener
         }
-
 
         inner class CartViewHolder(private val binding : CartItemBinding) : RecyclerView.ViewHolder(binding.root){
             fun bindData(cartItem: CartItem2){

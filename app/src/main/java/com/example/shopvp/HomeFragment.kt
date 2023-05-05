@@ -21,8 +21,8 @@ import com.google.android.material.chip.Chip
 import com.google.gson.annotations.SerializedName
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.io.Serializable
 import androidx.navigation.fragment.findNavController
+import com.example.shopvp.model.ShopItem
 
 class HomeFragment : Fragment() {
 
@@ -121,7 +121,7 @@ class HomeFragment : Fragment() {
 
     }
 
-    inner class HomeViewModel constructor(
+    class HomeViewModel constructor(
         private val app : Application,
         private val productUseCase: ProductUseCase
     ) : AndroidViewModel(app){
@@ -240,22 +240,22 @@ class HomeFragment : Fragment() {
         var category : String
     )
 
-    data class ShopItem(
-        @SerializedName("category")
-        val category: String,
-        @SerializedName("description")
-        val description: String,
-        @SerializedName("id")
-        val id: Int,
-        @SerializedName("image")
-        val image: String,
-        @SerializedName("price")
-        val price: Double,
-        @SerializedName("rating")
-        val rating: Rating,
-        @SerializedName("title")
-        val title: String
-    ) : Serializable
+//    data class ShopItem(
+//        @SerializedName("category")
+//        val category: String,
+//        @SerializedName("description")
+//        val description: String,
+//        @SerializedName("id")
+//        val id: Int,
+//        @SerializedName("image")
+//        val image: String,
+//        @SerializedName("price")
+//        val price: Double,
+//        @SerializedName("rating")
+//        val rating: Rating,
+//        @SerializedName("title")
+//        val title: String
+//    ) : Serializable
 
     inner class ProductUseCase constructor(
         private val repository: LoginFragment.ShopRepository

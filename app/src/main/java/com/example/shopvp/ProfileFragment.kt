@@ -14,7 +14,6 @@ import com.example.shopvp.databinding.FragmentProfileBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class ProfileFragment: Fragment() {
 
@@ -77,7 +76,7 @@ class ProfileFragment: Fragment() {
 
     }
 
-    inner class ProfileViewModel @Inject constructor(
+    inner class ProfileViewModel constructor(
         private val profileUseCase: ProfileUseCase,
     ) : ViewModel() {
 

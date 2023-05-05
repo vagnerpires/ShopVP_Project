@@ -13,8 +13,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.example.shopvp.databinding.FragmentLoginBinding
+import com.example.shopvp.model.ShopItem
 import com.example.shopvp.model.Utils.validateLoginRequest
-import com.example.shopvp.HomeFragment.ShopItem
 import com.google.gson.annotations.SerializedName
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -26,8 +26,8 @@ import java.io.Serializable
 
 class LoginFragment : Fragment() {
 
-    lateinit var viewModel: LoginViewModel
-    private lateinit var binding : FragmentLoginBinding
+    private lateinit var viewModel: LoginViewModel
+    private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -79,8 +79,7 @@ class LoginFragment : Fragment() {
 
     }
 
-
-    class LoginViewModel constructor(
+    private class LoginViewModel constructor(
         private val authUseCase: AuthUseCase,
         private val sharedPrefUtil: SharedPreference,
     ) : ViewModel(){

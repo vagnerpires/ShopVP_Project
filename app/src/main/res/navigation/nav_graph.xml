@@ -54,7 +54,7 @@
         tools:layout="@layout/fragment_product_detail">
         <argument
             android:name="shopItem"
-            app:argType="com.example.mobileapps_project.ShopItem" />
+            app:argType="com.example.shopvp.model.ShopItem" />
         <action
             android:id="@+id/action_productDetailFragment_to_cartFragment"
             app:destination="@id/cartFragment" />

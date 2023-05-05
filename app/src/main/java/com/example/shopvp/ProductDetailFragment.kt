@@ -10,7 +10,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.shopvp.databinding.FragmentProductDetailBinding
-import com.example.shopvp.HomeFragment.ShopItem
+import com.example.shopvp.model.ShopItem
 import com.example.shopvp.model.Utils
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
@@ -76,7 +76,7 @@ class ProductDetailFragment: Fragment() {
 
     }
 
-    inner class ProductDetailViewModel constructor(
+    class ProductDetailViewModel constructor(
         private val cartUseCase: CartUseCase,
     ) : ViewModel() {
 
